@@ -11,5 +11,7 @@
 
   <body>
     <%= yield %>
+    <%= link_to destroy_user_session_path, method: :delete do %>Logout<% end %>
+
   </body>
 </html>
