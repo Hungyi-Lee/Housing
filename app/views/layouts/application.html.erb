@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= yield %>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
       <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,10 +23,7 @@
             <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <%= link_to houses_path, class:"nav-link" do%>MY LIST<% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to new_house_path, class:"nav-link" do%>ADD NEW HOUSE<% end %>
+            <a class="nav-link" href="#">MY LIST</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,6 +45,6 @@
         </form>
       </div>
     </nav>
-    <%= yield %>
+
   </body>
 </html>

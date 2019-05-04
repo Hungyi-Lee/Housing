@@ -14,7 +14,7 @@ class CreateHouses < ActiveRecord::Migration[5.2]
       t.string :type
       t.string :address
       t.string :powervalue
-      t.string :string #sunlight
+      t.string :string
       t.string :balcony
       t.string :road
       t.string :cooker
