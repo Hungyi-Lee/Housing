@@ -10,7 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_03_033735) do
+ActiveRecord::Schema.define(version: 2019_05_04_054013) do
+
+  create_table "houses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "size"
+    t.integer "built"
+    t.integer "numberofparking"
+    t.integer "numberofstorage"
+    t.integer "numberofwindow"
+    t.integer "numberofgate"
+    t.string "descripofstorage"
+    t.string "sizeofparking"
+    t.string "typeofparking"
+    t.string "type"
+    t.string "address"
+    t.string "powervalue"
+    t.string "string"
+    t.string "balcony"
+    t.string "road"
+    t.string "cooker"
+    t.string "floor"
+    t.string "floormaterial"
+    t.string "typeofbuilding"
+    t.string "housestatus"
+    t.text "neighboar"
+    t.text "link"
+    t.text "clozet"
+    t.text "layout"
+    t.text "supplementary"
+    t.float "bed"
+    t.float "bath"
+    t.float "price"
+    t.float "pricesqft"
+    t.float "hoa"
+    t.float "latitude"
+    t.float "longitude"
+    t.boolean "bus"
+    t.boolean "showerhead"
+    t.boolean "diningbar"
+    t.boolean "drain"
+    t.boolean "elevator"
+    t.boolean "commonplace"
+    t.boolean "packagereceiver"
+    t.boolean "gym"
+    t.boolean "checked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
