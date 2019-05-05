@@ -65,19 +65,19 @@
     </div>
     <div class="form-group col-md-3">
       <b>Size(Sqft): </b>
-      <%= @house.size %>
+      <%= size(@house.size) %>
     </div>
     <div class="form-group col-md-3">
       <b>Price: </b>
-      <%= @house.price %>
+      <%= currency(@house.price) %>
     </div>
     <div class="form-group col-md-3">
       <b>Price/sqft: </b>
-      <%= @house.pricesqft %>
+      <%= currency(@house.pricesqft) %>
     </div>
     <div class="form-group col-md-3">
       <b>HOA: </b>
-      <%= @house.hoa %>
+      <%= currency(@house.hoa) %>
     </div>
     <div class="form-group col-md-3">
       <b>Built Year: </b>
@@ -228,54 +228,3 @@
     </div>
   </div>
 </div>
-
-
-
-<!--
-<table class="table table-hover">
-  <thead>
-    <tbody>
-      <tr>
-        <th>Link</th>
-        <td><%= link_to @house.link, url_with_protocol(@house.link), :target => '_blank' %></td>
-      </tr>
-      <tr>
-        <th>Address</th>
-        <td><%= @house.address %></td>
-      </tr>
-      <tr>
-        <th>House Type</th>
-        <td><%= @house.typeofhouse %></td>
-      </tr>
-      <tr>
-        <th>Building Type</th>
-        <td><%= @house.typeofbuilding %></td>
-      </tr>
-      <tr>
-        <th>House Size</th>
-        <td><%= @house.size %></td>
-      </tr>
-      <tr>
-        <th>Built Year</th>
-        <td><%= @house.built%></td>
-      </tr>
-
-      <tr>
-        <th>Number of Parking</th>
-        <td><%= @house.numberofparking %></td>
-      </tr>
-      <tr>
-        <th>Number of Storage</th>
-        <td><%= @house.numberofstorage %></td>
-      </tr>
-      <tr>
-        <th>Number of Windows</th>
-        <td><%= @house.numberofwindow %></td>
-      </tr>
-      <tr> -->
-        <!-- <th>Map</th> -->
-        <!-- <td><div id="map" style='width: 780px; height: 300px; border:1px solid #bfbfbf;'></div></td> -->
-      <!-- </tr>
-  </tbody>
-  </thead>
-</table> -->
