@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_025258) do
+ActiveRecord::Schema.define(version: 2019_05_05_032726) do
 
   create_table "houses", force: :cascade do |t|
     t.integer "user_id"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 2019_05_05_025258) do
     t.boolean "packagereceiver"
     t.boolean "gym"
     t.boolean "checked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.integer "house_id"
+    t.text "note"
+    t.text "imageurl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

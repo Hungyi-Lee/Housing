@@ -2,6 +2,7 @@ class HousesController < ApplicationController
 
   def new
     @house = House.new
+    @house.images.build
   end
 
   def create
@@ -16,6 +17,9 @@ class HousesController < ApplicationController
 
   def edit
     @house = House.find(params[:id])
+    0.times do
+      image = @house.images.build
+     end
   end
 
   def update
@@ -86,7 +90,12 @@ class HousesController < ApplicationController
                                     :commonplace,
                                     :packagereceiver,
                                     :gym,
-                                    :checked
-                                    )
+                                    :checked,
+                                    images_attributes: [:id,
+                                                        :imageurl,
+                                                        :note,
+                                                        :_destroy
+                                                       ]
+                                  )
     end
 end
