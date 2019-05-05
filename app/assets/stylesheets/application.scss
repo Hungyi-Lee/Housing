@@ -10,6 +10,23 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ */
+ /*
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
+.m-l-10{ margin-left: 10px}
+
+.m-t-5{ margin-top: 5px }
+.m-t-30{ margin-top: 30px}
+
+.p-10{ padding: 10px}
+.p-20{ padding: 20px}
+
+.bg-c-yellow{ background-image: linear-gradient(90deg, #fe9365, #feb798) }
+.bg-c-green{ background-image: linear-gradient(90deg, #0ac282, #0df3a3) }
+.bg-c-pink{ background-image: linear-gradient(90deg, #fe5d70, #fe909d) }
+.bg-c-blue{ background-image: linear-gradient(90deg, #01a9ac, #01dbdf) }

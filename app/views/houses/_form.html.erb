@@ -1,0 +1,219 @@
+
+<div class="container">
+<%= form_with(model: house, local: true) do |form| %>
+  <div class="row">
+    <div class="form-group col-sm-12">
+      <%= form.label :Link %>
+      <%= form.text_field :link, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-12">
+      <%= form.label :Images%>
+      <%= form.fields_for :images do |builder| %>
+        <%= render "image_fields", form: builder %>
+      <% end %>
+      <%= link_to_add_fields "+", form, :images, class: "btn btn-primary btn-sm" %>
+    </div>
+    <div class="form-group col-md-12">
+      <%= form.label :Address %>
+      <%= form.text_field :address, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :Type %><br/>
+      <%= form.select :typeofhouse, [ 'Townhouse', 'Condo' ], :prompt => 'Select One' %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"House Status" %><br />
+      <%= form.select :housestatus, [ 'Sold', 'Has sellers', 'On sale' ], :prompt => 'Select One' %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Type of the building" %><br />
+      <%= form.select :typeofbuilding, [ 'Roof', 'Box' ], :prompt => 'Select One' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <%= form.label :Size %>
+      <%= form.text_field :size, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :Price %>
+      <%= form.text_field :price, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Price/sqft" %>
+      <%= form.text_field :pricesqft, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :HOA %>
+      <%= form.text_field :hoa, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :"Built Year" %>
+      <%= form.text_field :built, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :"Number of Beds" %>
+      <%= form.text_field :bed, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :"Number of Bath" %>
+      <%= form.text_field :bath, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= form.label :"Number of Parking" %>
+      <%= form.number_field :numberofparking, class:"form-control", :size => 3 %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :"Parking Size" %>
+      <%= form.text_field :sizeofparking, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :"Parking Type" %><br />
+      <%= form.select :typeofparking, [ 'None', 'Garage', 'Common Parking' ], :prompt => 'Select One' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <%= form.label :"Number of gate" %><br/>
+      <%= form.select :numberofgate, [ '1', '2', '3', '4' ], :prompt => 'Select One' %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Number of window" %><br/>
+      <%= form.select :numberofwindow, [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ], :prompt => 'Select One' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <%= form.label :"Number of storage" %><br/>
+      <%= form.select :numberofstorage, [ '1', '2', '3', '4' ], :prompt => 'Select One' %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Description of the storage" %>
+      <%= form.text_field :descripofstorage, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <%= form.label :"Showerhead ?" %>
+      <%= form.label :showerhead, "Fixed", :value => "true"  %>
+      <%= form.radio_button :showerhead, true %>
+      <%= form.label :showerhead, "Flexible", :value => "false" %>
+      <%= form.radio_button :showerhead, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Dining Bar ?" %>
+      <%= form.label :diningbar, "Yes", :value => "true"  %>
+      <%= form.radio_button :diningbar, true %>
+      <%= form.label :diningbar, "No", :value => "false" %>
+      <%= form.radio_button :diningbar, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Drain ?" %>
+      <%= form.label :drain, "Yes", :value => "true"  %>
+      <%= form.radio_button :drain, true %>
+      <%= form.label :drain, "No", :value => "false" %>
+      <%= form.radio_button :drain, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Elevator ?" %>
+      <%= form.label :elevator, "Yes", :value => "true"  %>
+      <%= form.radio_button :elevator, true %>
+      <%= form.label :elevator, "No", :value => "false" %>
+      <%= form.radio_button :elevator, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Commonplace ?" %>
+      <%= form.label :commonplace, "Yes", :value => "true"  %>
+      <%= form.radio_button :commonplace, true %>
+      <%= form.label :commonplace, "No", :value => "false" %>
+      <%= form.radio_button :commonplace, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Package receiver ?" %>
+      <%= form.label :packagereceiver, "Yes", :value => "true"  %>
+      <%= form.radio_button :packagereceiver, true %>
+      <%= form.label :packagereceiver, "No", :value => "false" %>
+      <%= form.radio_button :packagereceiver, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Gym ?" %>
+      <%= form.label :gym, "Yes", :value => "true"  %>
+      <%= form.radio_button :gym, true %>
+      <%= form.label :gym, "No", :value => "false" %>
+      <%= form.radio_button :gym, false %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Bus ?"%>
+      <%= form.label :bus, "Yes", :value => "true"  %>
+      <%= form.radio_button :bus, true %>
+      <%= form.label :bus, "No", :value => "false" %>
+      <%= form.radio_button :bus, false %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <%= form.label :"Balcony" %>
+      <%= form.text_field :balcony, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Road in front of the building" %>
+      <%= form.text_field :road, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Cookers" %>
+      <%= form.text_field :cooker, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Floor" %>
+      <%= form.text_field :floor, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Floor Material" %>
+      <%= form.text_field :floormaterial, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Power Value" %>
+      <%= form.text_field :powervalue, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :Sunlight %>
+      <%= form.text_field :sunlight, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :clozet %>
+      <%= form.text_area :clozet, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :Neighbor %>
+      <%= form.text_area :neighboar, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :Layout %>
+      <%= form.text_area :layout, class:"form-control" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Any supplementary ?" %>
+      <%= form.text_area :supplementary, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <%= form.label :"Checked ?" %>
+      <%= form.label :checked, "Yes", :value => "true"  %>
+      <%= form.radio_button :checked, true %>
+      <%= form.label :checked, "No", :value => "false" %>
+      <%= form.radio_button :checked, false %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <%= form.submit "Save", class:"btn btn-success" %>　
+      <%= link_to 'Unsave', houses_path, class:"btn btn-danger"%>
+    </div>
+  </div>
+<% end %>
+</div>

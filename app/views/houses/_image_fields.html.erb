@@ -1,0 +1,6 @@
+<fieldset>
+		<%= form.text_field :imageurl, placeholder: "image url", class: "form-control" %>
+		<%= form.text_field :note, placeholder: "description", class: "form-control" %>
+		<%= form.hidden_field :_destroy %>
+		<%= link_to '#', class: "remove_fields" do%>Delete<% end %>
+</fieldset>
