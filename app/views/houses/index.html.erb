@@ -19,7 +19,9 @@
             <td><%= h.id %></td>
             <td><%= h.checked? ? 'o' : 'x'%></td>
             <td>
-              <% if h.address.include?("98107" || "98117") %>
+              <% if h.address.include?("98107") %>
+                Ballard
+              <% elsif h.address.include?("98117") %>
                 Ballard
               <% elsif h.address.include?("98103") %>
                 Fremont
@@ -33,7 +35,7 @@
             </td>
             <td><%= h.typeofhouse %></td>
             <td><%= currency(h.price) %></td>
-            <td><%= h.size %></td>
+            <td><%= size(h.size) %></td>
             <td><%= h.bed %> / <%= h.bath %></td>
             <td>
               <%= link_to "Show", house_path(h.id) %>
