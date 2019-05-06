@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :houses
 
+  get '/checkeditems' => 'top#checkeditems', as: "checkeditems"
+
   root 'top#index'
 end
