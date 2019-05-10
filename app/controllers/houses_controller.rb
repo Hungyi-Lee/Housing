@@ -91,6 +91,7 @@ class HousesController < ApplicationController
                                     :packagereceiver,
                                     :gym,
                                     :checked,
+                                    :likeornot,
                                     images_attributes: [:id,
                                                         :imageurl,
                                                         :note,

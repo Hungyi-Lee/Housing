@@ -5,6 +5,7 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Checked?</th>
+          <th scope="col">Like?</th>
           <th scope="col">Location</th>
           <th scope="col">Type</th>
           <th scope="col">Price</th>
@@ -17,6 +18,7 @@
         <% @houses.first(20).each do |h| %>
           <tr>
             <td><%= h.id %></td>
+            <td><%= h.likeornot %></td>
             <td><%= h.checked? ? 'o' : 'x'%></td>
             <td>
               <% if h.address.include?("98107") %>
