@@ -23,12 +23,12 @@
               <div class="row align-items-end">
                   <div class="col-12">
                       <h6 class="m-l-10 m-t-5 text-white">Checked Items</h6>
-                      <h4 class="m-l-10 text-white"><%= @houses.count%> items</h4>
+                      <h4 class="m-l-10 text-white"><%= @checkedhouses.count%> items</h4>
                   </div>
               </div>
           </div>
           <div class="card-footer">
-              <%= link_to houses_path, class: "text-white pull-right" do %>Learn More...<% end %>
+              <%= link_to checkeditems_path, class: "text-white pull-right" do %>Learn More...<% end %>
           </div>
       </div>
     </div>
@@ -39,12 +39,12 @@
               <div class="row align-items-end">
                   <div class="col-12">
                       <h6 class="m-l-10 m-t-5 text-white">Favorite Items</h6>
-                      <h4 class="m-l-10 text-white"><%= @houses.count%> items</h4>
+                      <h4 class="m-l-10 text-white"><%= @favoritehouses.count%> items</h4>
                   </div>
               </div>
           </div>
           <div class="card-footer">
-              <%= link_to houses_path, class: "text-white pull-right" do %>Learn More...<% end %>
+              <%= link_to favoriteitems_path, class: "text-white pull-right" do %>Learn More...<% end %>
           </div>
       </div>
     </div>
@@ -55,15 +55,22 @@
               <div class="row align-items-end">
                   <div class="col-12">
                       <h6 class="m-l-10 m-t-5 text-white">Black List</h6>
-                      <h4 class="m-l-10 text-white"><%= @houses.count%> items</h4>
+                      <h4 class="m-l-10 text-white"><%= @dislikehouses.count%> items</h4>
                   </div>
               </div>
           </div>
           <div class="card-footer">
-              <%= link_to houses_path, class: "text-white pull-right" do %>Learn More...<% end %>
+              <%= link_to dislikeitems_path, class: "text-white pull-right" do %>Learn More...<% end %>
           </div>
       </div>
     </div>
  </div>
  <hr>
+</div>
+<div class="container">
+  <div class="row">
+    <div style="margin:0 auto;">
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=103WdlPB8xaPRmSRaW_fiWMyvlviSr53v" width="640" height="480"></iframe>
+    </div>
+  </div>
 </div>

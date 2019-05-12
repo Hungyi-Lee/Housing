@@ -208,6 +208,10 @@
       <%= form.label :checked, "No", :value => "false" %>
       <%= form.radio_button :checked, false %>
     </div>
+    <div class="form-group col-md-3">
+      <%= form.label :"Like or not ?" %>
+      <%= form.select :likeornot, [ 'Super Like', 'Like', 'Normal', 'Dislike' ], :prompt => 'Select One' %>
+    </div>
   </div>
   <div class="row">
     <div class="form-group col-md-12">
